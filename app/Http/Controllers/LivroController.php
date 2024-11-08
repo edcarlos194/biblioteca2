@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Livro;
 use Illuminate\Http\Request;
-git init
 class LivroController extends Controller
 {
     public function index()
