@@ -12,16 +12,14 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('livros', function (Blueprint $table) {
-            $table->id();
-            $table->string('titulo', 100);
-            $table->string('autor', 50);
-            $table->integer('ano_publicacao');
-            $table->text('resumo')->nullable(true);
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('tarefas', function (Blueprint $table) {
+        $table->id();
+        $table->string('titulo', 100);
+        $table->text('descricao')->nullable();
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('livros');
+        Schema::dropIfExists('tarefas');
     }
 };
